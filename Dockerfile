@@ -7,7 +7,7 @@ RUN echo "Europe/Oslo" > /etc/timezone \
 
 # Leiningen
 ENV LEIN_ROOT 1
-RUN curl -s https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > \
+RUN curl -L -s https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > \
     /usr/local/bin/lein \
  && chmod 0755 /usr/local/bin/lein \
  && lein upgrade
